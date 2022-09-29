@@ -18,5 +18,11 @@ for std in student_names:
         std_score[suj] = random.randint(0,100)
     class_score[std] = std_score
 
-print(class_score)
+
+def get_student_score(std_name, suj_name):
+    score = class_score[std_name][suj_name]
+    return score
+
+print(get_student_score('A', '2'))
+
 
