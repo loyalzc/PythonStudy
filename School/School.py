@@ -20,8 +20,15 @@ for std in student_names:
 
 
 def get_student_score(std_name, suj_name):
+    """
+    获取某个学生某个科目的成绩
+    :param std_name: 学生名字
+    :param suj_name: 科目名字
+    :return: 得分
+    """
     score = class_score[std_name][suj_name]
     return score
+
 
 print(get_student_score('A', '2'))
 
