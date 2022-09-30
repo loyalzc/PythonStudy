@@ -32,4 +32,20 @@ def get_student_score(std_name, suj_name):
 
 print(get_student_score('A', '2'))
 
+def sort_sum():
+    for name1 in class_score[student_names]:
+        result = 0
+        for name2 in student_names[subject_names]:
+            result = result + name2
+            student_sum1[name1] = result
+            for i in range():
+                array[i] = result
 
+    for i in range(0, len(array)-1):
+            min_index = i
+            for j in range(i+1, len(array)):
+                if array[j] < array[min_index]:
+                    min_index = j
+                    array[i], array[min_index] = array[min_index], array[i]
+
+     return array
