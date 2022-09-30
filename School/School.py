@@ -40,6 +40,16 @@ def get_student_rank(class_score):
     return rank_score
 
 
+
+def set_student_info(class_score):
+    """
+    新增 学生的 年龄（0-20 随机） 性别（M F 随机）
+    :param class_score: 原学生信息
+    :return: 原来字典新增后的学生信息 包括（年龄 性别 各个科目分数
+    """
+    return class_score
+
+
 print(get_student_score('A', '2'))
 
 def sort_sum():
