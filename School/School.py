@@ -30,6 +30,16 @@ def get_student_score(std_name, suj_name):
     return score
 
 
+def get_student_rank(class_score):
+    """
+    计算所有学生的总分并排序输出
+    :param class_score: 各个学生各个科目分数
+    :return: 按照总分由大到小的顺序排序 姓名和总分
+    """
+    rank_score = {}
+    return rank_score
+
+
 print(get_student_score('A', '2'))
 
 
