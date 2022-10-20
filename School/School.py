@@ -29,8 +29,6 @@ for std in student_names:
 class_score_03 = dict(class_score)
 
 
-for std in student_names:
-    std_attribute = {}
     pass
 """
 
@@ -62,7 +60,6 @@ def get_student_rank(class_score):
         subj_scores["sum_socre"] = sum_socre
     print(class_score)
 
-
 def set_student_info(class_score):
     """
     新增 学生的 年龄（0-20 随机） 性别（M F 随机）
@@ -74,6 +71,17 @@ def set_student_info(class_score):
         stf_info['gender'] = random.choice(['M', 'F'])
     return class_score
 
+    #如何评价我的代码，哪错了，不能这样遍历吗
+def set_student_info(class_score):
+    """
+    新增 学生的 年龄（0-20 随机） 性别（M F 随机）
+    :param class_score: 原学生信息
+    :return: 原来字典新增后的学生信息 包括（年龄 性别 各个科目分数
+    """
+    for k in class_socre:
+        class_socre[k][gender] = random.choice(['M', 'F'])
+        class_socre[k][age] = random.randint(0, 20)
+    return class_score
 
 def get_student_info(file_path):
     """
