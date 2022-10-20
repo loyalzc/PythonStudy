@@ -75,6 +75,16 @@ def set_student_info(class_score):
     return class_score
 
 
+def get_student_info(file_path):
+    """
+    从文件获取学生的信息
+    :param file_path:文件路径
+    :return: 学生信息字典
+    """
+    student_dict = {}
+
+    return student_dict
+
 print(get_student_score('A', '2'))
 print(get_student_rank(class_score))
 print(set_student_info(class_score))
