@@ -6,6 +6,8 @@
  Date：2022/9/29
  Dscription：
 """
+
+
 import random
 
 student_names = ['A', 'B', 'C', 'D', 'E']
@@ -31,10 +33,6 @@ class_score_03 = dict(class_score)
 
     pass
 """
-
-
-random.randint(0, 20)
-random.choice(['M', 'F'])
 
 def get_student_score(std_name, suj_name):
     """
@@ -70,19 +68,13 @@ def set_student_info(class_score):
         stf_info['age'] = random.randint(0, 20)
         stf_info['gender'] = random.choice(['M', 'F'])
     return class_score
-
-    #如何评价我的代码，哪错了，不能这样遍历吗
-def set_student_info(class_score):
-    """
-    新增 学生的 年龄（0-20 随机） 性别（M F 随机）
-    :param class_score: 原学生信息
-    :return: 原来字典新增后的学生信息 包括（年龄 性别 各个科目分数
-    """
-    for k in class_socre:
-        class_socre[k][gender] = random.choice(['M', 'F'])
-        class_socre[k][age] = random.randint(0, 20)
+def test_1(class_score):
+    for k in class_score.keys():
+        class_score[k]['age'] = random.randint(0, 20)
+        class_score[k]['gender'] = random.choice(['M', 'F'])
     return class_score
-
+#这个test_1没啥问题了吧
+import os
 def get_student_info(file_path):
     """
     从文件获取学生的信息
@@ -90,12 +82,14 @@ def get_student_info(file_path):
     :return: 学生信息字典
     """
     student_dict = {}
-
+    file_name = os.path.basename(file_path)
+    with open(r'file_name', 'r', encoding='utd-8') as f:
+        for line in f.readlines():
+            print(line.strip())
+    student_dict = #还没有学明白- 。-,明天继续。
     return student_dict
 
 print(get_student_score('A', '2'))
 print(get_student_rank(class_score))
 print(set_student_info(class_score))
-
-
-
+print(test_1(class_score))
