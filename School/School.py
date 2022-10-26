@@ -68,28 +68,31 @@ def set_student_info(class_score):
         stf_info['age'] = random.randint(0, 20)
         stf_info['gender'] = random.choice(['M', 'F'])
     return class_score
-def test_1(class_score):
+def set_student_info1(class_score):
     for k in class_score.keys():
         class_score[k]['age'] = random.randint(0, 20)
         class_score[k]['gender'] = random.choice(['M', 'F'])
     return class_score
-#这个test_1没啥问题了吧
-import os
 def get_student_info(file_path):
     """
     从文件获取学生的信息
     :param file_path:文件路径
     :return: 学生信息字典
     """
-    student_dict = {}
-    file_name = os.path.basename(file_path)
-    with open(r'file_name', 'r', encoding='utd-8') as f:
-        for line in f.readlines():
-            print(line.strip())
-    student_dict = #还没有学明白- 。-,明天继续。
+    import os
+    a = 'file_path'
+    b = os.path.basename(a)
+    stu_dict2 = {}
+    with open('b', 'r') as f:
+        stu = f.readlines()
+        for i in random(len(stu)):
+            stu_dict1 = {stu[i][1]: stu[i][2]}
+            stu_dict2.update(stu_dict1)
+    student_dict = stu_dict2
     return student_dict
 
 print(get_student_score('A', '2'))
 print(get_student_rank(class_score))
 print(set_student_info(class_score))
-print(test_1(class_score))
+print(set_student_info1(class_score))
+print(get_student_info(C:\Users\zz\PycharmProjects\PythonStudy\data\student.txt))
