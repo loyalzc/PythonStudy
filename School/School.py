@@ -73,10 +73,12 @@ def set_student_info1(class_score):
         class_score[k]['age'] = random.randint(0, 20)
         class_score[k]['gender'] = random.choice(['M', 'F'])
     return class_score
-def get_student_info(file_path):
+
+
+def get_student_info(stu_file):
     """
     从文件获取学生的信息
-    :param file_path:文件路径
+    :param stu_file:文件路径
     :return: 学生信息字典
     """
     import os
@@ -91,8 +93,18 @@ def get_student_info(file_path):
     student_dict = stu_dict2
     return student_dict
 
+
+def get_stu_class_list_from_file(stu_file):
+    """
+    从文件获取学生信息，并创建每个Student的类对象 并存储到一个list中
+    :param stu_file:文件路径
+    :return: stu_list
+    """
+    stu_list = []
+
+    return stu_list
+
 print(get_student_score('A', '2'))
 print(get_student_rank(class_score))
 print(set_student_info(class_score))
 print(set_student_info1(class_score))
-print(get_student_info(C:\Users\zz\PycharmProjects\PythonStudy\data\student.txt))
